@@ -105,7 +105,7 @@ _exit:
     syscall
 
 _start:
-    mov rcx, 1                  ; Use as a counter. The default value is 3.
+    mov rcx, 1
 
 _loop:
     call _check_fizz
