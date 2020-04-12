@@ -1,0 +1,9 @@
+using system;
+
+fizzbuzz i =
+  if i mod 15 == 0 then puts "FizzBuzz"
+  else if i mod 3 == 0 then puts "Fizz"
+  else if i mod 5 == 0 then puts "Buzz"
+  else printf "%d\n" i;
+
+map fizzbuzz (1..15);
