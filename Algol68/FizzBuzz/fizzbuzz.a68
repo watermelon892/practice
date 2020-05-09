@@ -1,0 +1,13 @@
+BEGIN
+  FOR i FROM 1 WHILE i <= 15 DO
+    IF i %* 15 = 0 THEN
+      printf(($gl$, "FizzBuzz"))
+    ELIF i %* 3 = 0 THEN
+      printf(($gl$, "Fizz"))
+    ELIF i %* 5 = 0 THEN
+      printf(($gl$, "Buzz"))
+    ELSE
+      printf(($2dl$, i))
+    FI
+  OD
+END
