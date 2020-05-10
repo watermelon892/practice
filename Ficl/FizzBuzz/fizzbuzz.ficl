@@ -1,0 +1,24 @@
+: FizzBuzz ( n -- ? )
+  1 + 1 do
+    i 3 mod 0=
+    i 5 mod 0=
+    2dup and if
+      ." FizzBuzz" drop drop
+    else
+      if
+        ." Buzz" drop
+      else
+        if
+          ." Fizz"
+        else
+          i .
+        then
+      then
+    then
+    cr
+  loop
+;
+
+15 FizzBuzz
+
+bye
