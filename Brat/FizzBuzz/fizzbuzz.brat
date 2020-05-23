@@ -1,0 +1,11 @@
+1.to 15 { i |
+  true? i % 15 == 0
+    { p "FizzBuzz" }
+    { true? i % 3 == 0
+      { p "Fizz" }
+      { true? i % 5 == 0
+        { p "Buzz" }
+        { p i }
+      }
+    }
+  }
