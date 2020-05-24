@@ -1,0 +1,17 @@
+# The Unix Desktop Calculator
+1                # Number = 1
+[[Fizz]n 1 sw]sF # Print "Fizz"
+[[Buzz]n 1 sw]sB # Print "Buzz"
+[dn]sN           # Print Number
+[
+  dd
+  0 sw           # w = 0
+  3% 0=F         # Fizz if 0 == Number % 3
+  5% 0=B         # Buzz if 0 == Number % 5
+  lw 0=N         # Number if 0 == w
+# Print new line
+[
+]n
+  1+d            # Increment Number
+  15!<L          # 15 >= Number
+]dsLx            # Enter Loop
