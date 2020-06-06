@@ -1,0 +1,17 @@
+def i := 1;
+while: { i <= 15 } do: {
+  if: ( i % 15 == 0 ) then: {
+    system.println("FizzBuzz");
+  } else: {
+    if: ( i % 3 == 0 ) then: {
+      system.println("Fizz");
+    } else: {
+      if: ( i % 5 == 0 ) then: {
+        system.println("Buzz");
+      } else: {
+        system.println(i);
+      };
+    };
+  };
+  i := i + 1;
+};
