@@ -1,0 +1,26 @@
+func fizzbuzz(i : int) -> string {
+  var ret = "";
+  if (i % 15 == 0) {
+    ret = "FizzBuzz"
+  } else if (i % 3 == 0) {
+    ret = "Fizz"
+  } else if (i % 5 == 0) {
+    ret = "Buzz"
+  } else {
+    ret = i + ""
+  };
+  ret
+}
+
+func run(n : int) -> int {
+  var i = 1;
+  for (i = 1; i <= n; i = i + 1) {
+    prints(fizzbuzz(i) + "\n")
+  };
+  0
+}
+
+func main() -> int {
+  run(15);
+  0
+}
