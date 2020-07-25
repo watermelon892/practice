@@ -1,0 +1,12 @@
+function hanoi([int] $n, [char] $from, [char] $to, [char] $via) {
+  if ($n -gt 1) {
+    hanoi ($n - 1) $from $via $to
+    Write-Host "$from -> $to"
+    hanoi ($n - 1) $via $to $from
+  } else {
+    Write-Host "$from -> $to"
+  }
+}
+
+$n = Read-Host
+hanoi $n 'a' 'b' 'c'
