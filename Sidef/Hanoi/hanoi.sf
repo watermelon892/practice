@@ -1,0 +1,16 @@
+require('Term::ReadLine')
+
+var term = %O<Term::ReadLine>.new('Hanoi')
+
+func hanoi(n, from, to, via) {
+  if (n > 1) {
+    hanoi(n - 1, from, via, to)
+    say "#{from} -> #{to}"
+    hanoi(n - 1, via, to, from)
+  } else {
+    say "#{from} -> #{to}"
+  }
+}
+
+var n = term.readline(">> ")
+hanoi(Number(n), "a", "b", "c")
