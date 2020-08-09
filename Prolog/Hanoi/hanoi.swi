@@ -1,0 +1,18 @@
+% Standard Input Example : 3. (Finally "." is required)
+
+:- set_prolog_flag(verbose, silent).
+:- prompt(_, '').
+:- use_module(library(readutil)).
+
+main:-
+  read(X),
+  hanoi(X, a, b, c),
+  halt.
+
+hanoi(1, From, To, _) :- write(From -> To), nl.
+hanoi(N, From, To, Via) :-
+  N1 is N - 1, hanoi(N1, From, Via, To),
+  write(From -> To), nl,
+  hanoi(N1, Via, To, From).
+
+:- main.
