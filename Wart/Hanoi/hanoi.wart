@@ -1,0 +1,9 @@
+(def (hanoi n from to via)
+  (if (> n 1)
+      (do
+        (hanoi (- n 1) from via to)
+        (prn from " -> " to)
+        (hanoi (- n 1) via to from))
+      (prn from " -> " to)))
+
+(hanoi 2 "a" "b" "c")
