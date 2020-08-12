@@ -1,0 +1,12 @@
+hanoi n from to via :=
+  if n > 1 then
+    do {
+      hanoi((n - 1), from, via, to);
+      print(appendString (appendString from " -> ") to);
+      hanoi((n - 1), via, to, from)
+    }
+  else
+    print(appendString (appendString from " -> ") to)
+
+main args :=
+  hanoi(3, "a", "b", "c")
