@@ -1,0 +1,11 @@
+using system;
+
+hanoi n from to via =
+  if n > 1 then
+    hanoi (n - 1) from via to,
+    printf "%s\n" (from + " -> " + to),
+    hanoi (n - 1) via to from
+  else
+    printf "%s\n" (from + " -> " + to);
+
+hanoi 3 "a" "b" "c";
