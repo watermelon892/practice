@@ -1,0 +1,3 @@
+." Hello, world!" CR
+
+bye
