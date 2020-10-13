@@ -1,0 +1,6 @@
+using system;
+
+hello name =
+  printf "Hello, %s\n" name;
+
+hello "world!";
