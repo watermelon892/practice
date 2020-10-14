@@ -1,0 +1,9 @@
+:- set_prolog_flag(verbose, silent).
+:- prompt(_, '').
+:- use_module(library(readutil)).
+
+main:-
+  format('Hello, world!~n'),
+  halt.
+
+:- main.
