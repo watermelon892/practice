@@ -1,0 +1,4 @@
+#! octave-interpreter-name -qf
+# a hello Octave program
+
+printf("Hello, world!\n")
